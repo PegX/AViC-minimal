@@ -1,0 +1,44 @@
+{
+  "project": "AViC",
+  "scope": "attention component demo; no images or benchmark accuracy",
+  "input_shape": [
+    1,
+    3,
+    4
+  ],
+  "attention_shape": [
+    1,
+    2,
+    3,
+    3
+  ],
+  "heads": [
+    {
+      "circuit": {
+        "key": "layer0.attn1.head0",
+        "family": "gatn",
+        "unit": "attention_head",
+        "layer": 0,
+        "group": "attn1",
+        "index": 0,
+        "ablation_mode": "zero"
+      },
+      "output_l2_change": 0.471886545419693,
+      "ablated_attention_mass": 0.0
+    },
+    {
+      "circuit": {
+        "key": "layer0.attn1.head1",
+        "family": "gatn",
+        "unit": "attention_head",
+        "layer": 0,
+        "group": "attn1",
+        "index": 1,
+        "ablation_mode": "zero"
+      },
+      "output_l2_change": 0.5458139777183533,
+      "ablated_attention_mass": 0.0
+    }
+  ],
+  "restored": true
+}
